@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-map {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.bottom-panel {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+}
+
+.bottom-panel button,
+#langButton {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  min-width: 200px; /* Установить ширину кнопки 200px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bottom-panel button:hover,
+#langButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  bottom: calc(
+    100% + 5px
+  ); /* Меню появляется ровно над кнопкой с небольшим отступом */
+  left: 0; /* Исправление на точное позиционирование */
+  width: 200px; /* Сделать ширину 200px, как у кнопки */
+  list-style: none;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Смещение списка терминалов вправо */
+#terminalsMenu {
+  left: 225px; /* Добавляем смещение только для меню терминалов */
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none; /* Убираем подчеркивания у надписей в списках */
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown-menu a li {
+  text-decoration: none;
+  color: inherit;
+}
+.dropdown-menu li:hover {
+  background: lightgray;
+}
+
+.hidden {
+  display: none;
+}

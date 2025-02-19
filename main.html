@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опорная сеть</title>
+    <link rel="stylesheet" href="styles/artem.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="./images/rus-map2.png"
+        alt="Карта России"
+        class="background-map"
+      />
+      <h1 class="title">
+        Опорная сеть мультимодальных транспортно-логистических центров
+      </h1>
+    </div>
+
+    <!-- Нижняя панель -->
+    <div class="bottom-panel">
+      <div class="lang-switcher">
+        <button id="langButton">🌍</button>
+        <ul id="langMenu" class="dropdown-menu hidden">
+          <li data-lang="en">English</li>
+          <li data-lang="ru">Русский</li>
+          <li data-lang="zh">中文</li>
+        </ul>
+      </div>
+      <div class="terminals-menu">
+        <button id="terminalsButton">Терминалы</button>
+        <ul id="terminalsMenu" class="dropdown-menu hidden">
+          <li><a href="#">Угли</a></li>
+          <li><a href="#">Кузбасс</a></li>
+          <li><a href="#">Ховрино</a></li>
+          <li><a href="#">Уральский</a></li>
+          <a href="./pages/artem.html"><li>Артем</li></a>
+          <li><a href="#">Сибирский</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

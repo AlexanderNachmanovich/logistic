@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Video Map</title>
+    <link rel="stylesheet" href="../styles/artem.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-wrapper">
+        <video
+          id="backgroundVideo"
+          src="../images/cam001.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div
+          class="point point-small"
+          style="top: 40%; left: 60%"
+          data-id="1"
+        ></div>
+        <div
+          class="point point-small"
+          style="top: 55%; left: 30%"
+          data-id="2"
+        ></div>
+        <div
+          class="point point-large"
+          style="top: 70%; left: 80%"
+          data-id="3"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Логотип -->
+    <div class="logo">
+      <img src="../images/Logo_app_20-08.png" alt="Logo" />
+    </div>
+
+    <!-- Нижняя панель -->
+    <div class="bottom-panel">
+      <div class="lang-switcher">
+        <button id="langButton">🌍</button>
+        <ul id="langMenu" class="hidden">
+          <li data-lang="en">English</li>
+          <li data-lang="ru">Русский</li>
+          <li data-lang="zh">中文</li>
+        </ul>
+      </div>
+      <a href="../main.html"><button id="networkMap">Карта сети</button></a>
+      <button id="regionMap">Карта региона</button>
+    </div>
+
+    <!-- Кнопки увеличения и уменьшения -->
+    <div class="buttons">
+      <button id="zoomIn">+</button>
+      <button id="zoomOut">-</button>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+      <span id="closeModal">&times;</span>
+      <img id="modalImage" src="" />
+      <video id="modalVideo" controls></video>
+    </div>
+
+    <script src="../scripts/artem.js"></script>
+  </body>
+</html>

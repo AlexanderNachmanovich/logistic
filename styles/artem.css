@@ -1,0 +1,205 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер для видео */
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Видео и его обертка */
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  will-change: transform;
+}
+
+video {
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+}
+
+/* Точки на карте */
+.point {
+  position: absolute;
+  background: url("../images/Point_20-08.png") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s;
+}
+
+.point-small {
+  width: 40px;
+  height: 40px;
+}
+
+.point-large {
+  width: 48px; /* На 20% больше */
+  height: 48px;
+}
+
+.point:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Логотип */
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 40vh;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Нижняя панель */
+.bottom-panel {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px; /* Увеличенный отступ между кнопками */
+}
+
+.bottom-panel button,
+#langButton {
+  padding: 12px 20px; /* Увеличенные кнопки */
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  min-width: 160px; /* Увеличенная ширина кнопок */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-panel button:hover,
+#langButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Кнопка глобуса */
+#langButton {
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  min-width: 160px; /* Сделать ширину такой же, как у других кнопок */
+  text-align: center;
+}
+
+/* Список языков */
+.lang-switcher {
+  position: relative;
+}
+
+#langMenu {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%; /* Теперь меню такой же ширины, как кнопка */
+  list-style: none;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#langMenu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center; /* Выравниваем текст */
+}
+
+#langMenu li:hover {
+  background: lightgray;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Кнопки увеличения и уменьшения */
+.buttons {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Модальные окна */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#modalImage,
+#modalVideo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
